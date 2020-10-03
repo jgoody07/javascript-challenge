@@ -13,11 +13,11 @@ function buildTable(data) {
   // Loop through each object in the data
     data.forEach((dataRow) => {
     // Append a row to the table body
-    var row = tbody.append("tr");
+    let row = tbody.append("tr");
 
     // Loop through each field in the dataRow and add each value as a table cell (td)
     Object.values(dataRow).forEach((val) => {
-      var cell = row.append("td");
+      let cell = row.append("td");
       cell.text(val);
     });
   });
@@ -30,9 +30,9 @@ var filters = {};
 function updateFilters() {
 
   // Save the element, value, and id of the filter from input
-  var changedElement = d3.select(this).select("input");
-  var elementValue = changedElement.property("value");
-  var filterId = changedElement.attr("id");
+  let changedElement = d3.select(this).select("input");
+  let elementValue = changedElement.property("value");
+  let filterId = changedElement.attr("id");
 
   // If a filter value was entered then add that filterId and value to the filters list. 
   if (elementValue) {
