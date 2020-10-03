@@ -1,5 +1,5 @@
 // pull data from data.js
-let tabledata = data; 
+var tabledata = data; 
 console.log(tabledata);
 
 // select the table body
